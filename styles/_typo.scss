@@ -1,0 +1,26 @@
+//_typo
+body {
+  font-family: $mainFamily;
+  font-size: $mainSize;
+}
+
+a {
+  text-decoration: none;
+  color: $primaryLinkColor;
+
+  &:hover {
+    color: lighten($primaryLinkColor, 30%);
+  }
+}
+
+.board-actions {
+  a:hover {
+    color: darken($primaryLinkColor, 30%);
+  }
+}
+
+input, select, textarea {
+  font-family: $mainFamily;
+  font-size: $formSize;
+  padding: 4px;
+}

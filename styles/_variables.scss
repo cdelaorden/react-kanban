@@ -1,0 +1,29 @@
+//_variables.scss
+
+//COLORS
+$bgColor: #aaa;
+$primaryColor: #fff;
+
+$buttonTextColor: #333;
+$errorColor: #f00;
+$warningColor: #f90;
+$successColor: #9f0;
+$infoColor: #39f;
+
+$primaryLinkColor: #333;
+
+//SIZES
+$mainSize: 15px;
+$formSize: 14px;
+
+//FAMILY
+$mainFamily: Roboto, Helvetica, Verdana, sans-serif;
+
+
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 100%;
+
+// breakpoints
+$breakpoint-small: "only screen and (min-width: 20em)";
+$breakpoint-medium: "only screen and (min-width: 50em)";

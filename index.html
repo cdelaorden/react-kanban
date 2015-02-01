@@ -1,0 +1,123 @@
+<html lang="es" charset="utf-8">
+<head>
+  <title>React Webpack BaseApp</title>
+  <link href='//fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles/styles.css" />
+  <script src="dist/bundle.js"></script>
+</head>
+<body onload="startApp()">
+  <div class="wrapper">
+    <!--header-->
+    <div class="row header">
+      <div class="col-12">
+        <h1 class="title">Trellin</h1>
+      </div>
+    </div>
+
+    <!--toolbar -->
+    <div class="row toolbar">
+      <div class="col-12">
+        some stuff
+      </div>
+    </div>
+
+    <!-- boards -->
+    <div class="row board-container">
+      <div class="col-2 board-wrapper">
+        <div class="board-header">
+          <h2>Backlog</h2>
+        </div>
+        <div class="board-content">
+          <div class="card-wrapper">
+            <div class="card-header">
+              <a href="#" class="card-title">As a bad FIFA player, I want to play in automatic mode</a>
+            </div>
+            <div class="card-badges">
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card-header">
+              <a href="#" class="card-title">As a good FIFA troll, I wanna do tricks whenever possible</a>
+            </div>
+            <div class="card-badges">
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card-header">
+              <a href="#" class="card-title">Do some stuff 3</a>
+            </div>
+            <div class="card-badges">
+            </div>
+          </div>
+
+          <div class="board-actions">
+            <!-- <ul>
+              <li><a href="#">Add card...</a></li>
+            </ul> -->
+            <div class="board-add-card">
+              <div class="card-composer">
+                <textarea></textarea>
+              </div>
+              <div class="card-composer-buttons">
+                <button class="btn">Add</button>
+                <a href="#">Cancel</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-2 board-wrapper">
+        <div class="board-header">
+          <h2>Doing</h2>
+        </div>
+        <div class="board-content">
+          <div class="card-wrapper">
+            <div class="card-header">
+              <a href="#" class="card-title">As a bad FIFA player, I want to play in automatic mode</a>
+            </div>
+            <div class="card-badges">
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card-header">
+              <a href="#" class="card-title">As a good FIFA troll, I wanna do tricks whenever possible</a>
+            </div>
+            <div class="card-badges">
+            </div>
+          </div>
+
+          <div class="card-wrapper">
+            <div class="card-header">
+              <a href="#" class="card-title">Do some stuff 3</a>
+            </div>
+            <div class="card-badges">
+            </div>
+          </div>
+
+          <div class="board-actions">
+            <ul>
+              <li><a href="#">Add card...</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-2 board-wrapper">
+        <div class="board-add-wrapper">
+          <!-- <h3><a href="#">+ Add Board...</a></h3> -->
+          <input type="text" placeholder="Board name..." class="board-name" />
+          <button class="btn">Save</button>
+          <a href="#">Cancel</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

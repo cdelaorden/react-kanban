@@ -1,0 +1,27 @@
+{
+  "name": "react-webpack-setup",
+  "version": "0.1.0",
+  "description": "React dev setup with webpack",
+  "main": "index.js",
+  "scripts": {
+    "build-js": "webpack",
+    "watch-js": "onchange ./app/**/.js -- npm run build-js",
+    "build-sass": "sass ./styles/index.scss ./styles/styles.css",
+    "watch-sass": "onchange ./styles/**/*.scss -- npm run build-sass",
+    "watch-all": "npm run watch-js & npm run watch-sass",
+    "build": "npm run build-js && npm run build-sass",
+    "dev": "npm run watch-all & python -m SimpleHTTPServer"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jsx-loader": "~0.12.2",
+    "onchange": "0.0.2"
+  },
+  "dependencies": {
+    "webpack": "~1.5.3",
+    "react": "~0.12.2",
+    "sass-loader": "~0.3.1",
+    "lodash": "~3.0.1"
+  }
+}

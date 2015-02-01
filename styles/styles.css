@@ -1,0 +1,256 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.wrapper,
+.row {
+  *zoom: 1; }
+  .wrapper:before,
+  .row:before, .wrapper:after,
+  .row:after {
+    content: " ";
+    display: table; }
+  .wrapper:after,
+  .row:after {
+    clear: both; }
+
+.hidden {
+  display: none; }
+
+h1 {
+  font-size: 30px; }
+
+h2 {
+  font-size: 22.5px; }
+
+h3 {
+  font-size: 19.5px; }
+
+h4 {
+  font-size: 18px; }
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.wrapper,
+.row {
+  *zoom: 1; }
+  .wrapper:before,
+  .row:before, .wrapper:after,
+  .row:after {
+    content: " ";
+    display: table; }
+  .wrapper:after,
+  .row:after {
+    clear: both; }
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important; }
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto; }
+
+[class*='col-'] {
+  float: left;
+  padding: 1em;
+  width: 100%;
+  min-height: 1px; }
+
+@media only screen and (min-width: 50em) {
+  .wrapper {
+    width: 95%;
+    max-width: 100%; }
+
+  .col-1 {
+    width: 8.33333%; }
+
+  .col-2 {
+    width: 16.66667%; }
+
+  .col-3 {
+    width: 25%; }
+
+  .col-4 {
+    width: 33.33333%; }
+
+  .col-5 {
+    width: 41.66667%; }
+
+  .col-6 {
+    width: 50%; }
+
+  .col-7 {
+    width: 58.33333%; }
+
+  .col-8 {
+    width: 66.66667%; }
+
+  .col-9 {
+    width: 75%; }
+
+  .col-10 {
+    width: 83.33333%; }
+
+  .col-11 {
+    width: 91.66667%; }
+
+  .col-12 {
+    width: 100%; } }
+body {
+  background-color: #aaaaaa; }
+
+.header {
+  background-color: #000;
+  padding: 10px; }
+  .header .title {
+    color: #f93; }
+
+.toolbar {
+  background-color: #dddddd; }
+
+.board-container {
+  background-color: #777777; }
+
+.board-wrapper {
+  background-color: #909090;
+  margin: 0 2px; }
+
+.board-actions {
+  margin: 4px 0; }
+  .board-actions ul li {
+    padding: 4px; }
+
+.board-add-wrapper {
+  min-height: 400px;
+  margin: auto 0; }
+  .board-add-wrapper input.board-name {
+    width: 100%;
+    display: block; }
+
+.card-wrapper {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #f6f6f6;
+  border-radius: 6px; }
+
+.card-composer {
+  background: #fff;
+  display: block; }
+  .card-composer textarea {
+    width: 100%;
+    min-height: 60px;
+    overflow: auto;
+    margin: 0 auto;
+    padding: 4px;
+    border: none;
+    resize: none;
+    font-size: 14px;
+    font-family: Roboto, Helvetica, Verdana, sans-serif; }
+    .card-composer textarea :active, .card-composer textarea :select, .card-composer textarea :focus {
+      border: none;
+      outline: none; }
+
+.card-composer-buttons {
+  margin: 4px 0;
+  clear: left; }
+
+.btn {
+  text-decoration: none;
+  padding: 8px 8px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  color: #333333;
+  background-color: #fafafa;
+  min-width: 100px; }
+  .btn.error {
+    background-color: red; }
+  .btn.warning {
+    background-color: #ff9900; }
+  .btn.success {
+    background-color: #99ff00; }
+  .btn.info {
+    background-color: #3399ff; }
+
+body {
+  font-family: Roboto, Helvetica, Verdana, sans-serif;
+  font-size: 15px; }
+
+a {
+  text-decoration: none;
+  color: #333333; }
+  a:hover {
+    color: gray; }
+
+.board-actions a:hover {
+  color: black; }
+
+input, select, textarea {
+  font-family: Roboto, Helvetica, Verdana, sans-serif;
+  font-size: 14px;
+  padding: 4px; }
+
+.modal-container {
+  width: 50%;
+  margin: 25% auto; }
+
+.modal-dialog {
+  background-color: #fff;
+  border-radius: 6px; }

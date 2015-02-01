@@ -1,0 +1,29 @@
+//buttons
+
+
+.btn {
+  text-decoration: none;
+  padding: 8px 8px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  color: $buttonTextColor;
+  background-color: #fafafa;
+  min-width: 100px;
+
+  &.error {
+    background-color: $errorColor;
+  }
+
+  &.warning {
+    background-color: $warningColor;
+  }
+
+  &.success {
+    background-color: $successColor;
+  }
+
+  &.info {
+    background-color: $infoColor;
+  }
+
+}
