@@ -13,7 +13,8 @@ body {
   background-color: lighten($bgColor, 20%);
 }
 .board-container {
-  background-color: darken($bgColor, 20%)
+  background-color: darken($bgColor, 20%);
+  overflow-x: scroll;
 }
 
 .board-wrapper {

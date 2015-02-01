@@ -3,6 +3,7 @@ var React = require("react"),
     AppState = require("../appstate");
 
 
+/** CardComposer - Form to create a new card **/
 var CardComposer = React.createClass({
   setFocus: function(){
     this.refs.composer.getDOMNode().focus();
@@ -36,6 +37,7 @@ var CardComposer = React.createClass({
   }
 });
 
+/** BoardActions - Board bottom menu **/
 var BoardActions = React.createClass({
   render: function(){
     return (<ul>
@@ -44,6 +46,7 @@ var BoardActions = React.createClass({
   }
 });
 
+/** Board - A single kanban board **/
 var Board = React.createClass({
   getInitialState: function(){
     return {
@@ -51,25 +54,27 @@ var Board = React.createClass({
       cards: AppState.getCards(this.props.boardId)
     };
   },
-  onAddCard: function(event){
+  addCard: function(event){
     this.setState({ showComposer: true });
   },
-  onCancelCard: function() {
+  cancelCard: function() {
     this.setState({ showComposer: false });
   },
-  onSaveCard: function(data){
+  saveCard: function(data){
     AppState.addCard(this.props.id, data);
     this.setState({ showComposer: false });
-
+  },
+  updateCard: function(data){
+    AppState.updateCard(this.props.id, data.cardId, data.name);
   },
   render: function(){
     var cards = this.props.cards.map(function(card){
-      return <Card key={card.id} name={card.name} />;
+      return (<Card key={card.id} id={card.id} name={card.name} onUpdate={ this.updateCard } />);
     });
 
     var actions = this.state.showComposer ?
-      <CardComposer ref="composer" saveHandler={ this.onSaveCard } cancelHandler={ this.onCancelCard } /> :
-      <BoardActions addCardHandler={ this.onAddCard } />;
+      <CardComposer ref="composer" saveHandler={ this.saveCard } cancelHandler={ this.cancelCard } /> :
+      <BoardActions addCardHandler={ this.addCard } />;
 
     return (
       <div className="col-2 board-wrapper">

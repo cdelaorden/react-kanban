@@ -17,12 +17,25 @@ var MainView = React.createClass({
       showNewBoard: true
     });
   },
+  saveOnEnter: function(event){
+    if(event.keyCode === 13){
+      this.saveBoard(event);
+    }
+  },
   saveBoard: function(event){
     var text = this.refs.boardname.getDOMNode().value;
     if(text){
       AppState.addBoard(text);
     }
     this.setState({ showNewBoard: false });
+  },
+  cancelBoard: function(){
+    this.setState({ showNewBoard: false });
+  },
+  componentDidUpdate: function(){
+    if(this.state.showNewBoard){
+      this.refs.boardname.getDOMNode().focus();
+    }
   },
   render: function(){
     var boardViews = this.state.boards.map(function(board){
@@ -31,9 +44,9 @@ var MainView = React.createClass({
 
     var addTitle = (<h3 ref="addTitle"><a href="#" onClick={ this.addBoard }>+ Add Board...</a></h3>);
     var addForm = (<div ref="addForm" className="board-add-form">
-                <input type="text" ref="boardname" placeholder="Board name..." className="board-name" />
+                <input type="text" ref="boardname" placeholder="Board name..." onKeyUp={ this.saveOnEnter } className="board-name" />
                 <button className="btn" onClick={ this.saveBoard }>Save</button>
-                <a href="#">Cancel</a>
+                <a href="#" onClick={ this.cancelBoard }>Cancel</a>
               </div>);
     var actions = this.state.showNewBoard ? addForm : addTitle;
 

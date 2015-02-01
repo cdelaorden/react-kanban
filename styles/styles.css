@@ -167,7 +167,8 @@ body {
   background-color: #dddddd; }
 
 .board-container {
-  background-color: #777777; }
+  background-color: #777777;
+  overflow-x: scroll; }
 
 .board-wrapper {
   background-color: #909090;

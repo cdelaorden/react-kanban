@@ -57,6 +57,25 @@ module.exports = {
       return board.cards;
     });
   },
+  deleteCard: function(boardId, id){
+    var board = _.find(appState.boards, function(b) { return b.id === boardId });
+    if(board){
+      board.cards = board.cards.filter(function(c){
+        return c.id !== id;
+      });
+    }
+    emitter.trigger("change");
+  },
+  updateCard: function(boardId, id, newText){
+    var board = _.find(appState.boards, function(b){ return b.id === boardId });
+    if(board){
+      var card = _.find(board.cards, function(c){ return c.id === id });
+      if(card){
+        card.name = newText;
+      }
+    }
+    emitter.trigger("change");
+  },
   addBoard: function(name){
     appState.boards.push({
       id: ++appState.nextBoardId,
