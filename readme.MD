@@ -4,6 +4,11 @@ Skeleton app for building a SPA with React, using Webpack with JSX loader as bun
 
 It also uses SASS for styles. All `.scss` files are located in `./styles`.
 
+## Dependencies
+
+1. Webpack. Install with `sudo npm install -g webpack`.
+2. Sass command-line tool (depends on Ruby) if you want `.scss` bundling.
+
 ## Available npm commands:
 
 1. `npm run build` 
