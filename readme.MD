@@ -10,6 +10,4 @@ It also uses SASS for styles. All `.scss` files are located in `./styles`.
 Will build everything (SASS + JSX + CommonJS bundle).
 
 2. `npm run dev` 
-Used for development, it watches all `sass` and `js` files, rebuilds on changes, and starts simple local server at localhost:8080. Not live reload implemented.
-
-
+Used for development, it watches all `sass` and `js` files, rebuilds on changes, and starts simple local server at localhost:8080. Live reload not implemented, you'll have to refresh your app upon changes.
